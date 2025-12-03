@@ -40,7 +40,7 @@ function App() {
       <div className="container py-5">
         <h1>Tutti i personaggi</h1>
         <div className="card-list">
-          {attori.map((attore) => (
+          {/* {attori.map((attore) => ( primo metodo, stmpando attori e attrici separate)
             <Card attore={attore} key={attore.id} />
           ))}
           {attrici.map((attrice) => (
@@ -48,7 +48,16 @@ function App() {
           ))}
           {totale.map((curElem) => (
             <h2>{curElem.name}</h2>
+          ))} */}
+
+          {/* SECONDO METODO CON UN SOLO MAP */}
+          {totale.map((curElem) => (
+            <Card attore={curElem} key={curElem.id} />
           ))}
+          {totale.map((curElem) => (
+            <h2>{curElem.name}</h2>
+          ))}
+
         </div>
       </div>
     </>
