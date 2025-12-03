@@ -10,10 +10,17 @@ import Card from './components/Card'
 function App() {
   const [attori, setAttori] = useState([])
   const [attrici, setAttrici] = useState([])
+  const [totale, setTotale] = useState([])
+  // Effettua il fetch solo una volta
   useEffect(() => {
     fetchAttori();
-    fetchAttrici()
-  }, [])
+    fetchAttrici();
+  }, []);
+
+  // Aggiorna 'totale' quando cambiano attori o attrici
+  useEffect(() => {
+    setTotale([...attori, ...attrici]);
+  }, [attori, attrici]);
 
   function fetchAttori() {
     axios.get("https://lanciweb.github.io/demo/api/actors/")
@@ -27,7 +34,7 @@ function App() {
         setAttrici(resp.data)
       })
   }
-
+  console.log(totale)
   return (
     <>
       <div className="container py-5">
@@ -38,6 +45,9 @@ function App() {
           ))}
           {attrici.map((attrice) => (
             <Card attore={attrice} key={attrice.id} />
+          ))}
+          {totale.map((curElem) => (
+            <h2>{curElem.name}</h2>
           ))}
         </div>
       </div>
