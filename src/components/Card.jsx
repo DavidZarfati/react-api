@@ -28,7 +28,7 @@ export default function Card({ attore }) {
                         }</h5>
                         <h6>Nazionalita:{nationality}</h6>
                         <p className="card-text">{biography}</p>
-                        <h3>Riconoscimenti:{awards}</h3>
+                        <h3>Riconoscimenti:{Array.isArray(awards) ? awards.join(', ') : awards}</h3>
                     </div>
                 </div>
             </div>
