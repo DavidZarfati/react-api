@@ -9,14 +9,22 @@ import Card from './components/Card'
 
 function App() {
   const [attori, setAttori] = useState([])
+  const [attrici, setAttrici] = useState([])
   useEffect(() => {
     fetchAttori();
+    fetchAttrici()
   }, [])
 
   function fetchAttori() {
     axios.get("https://lanciweb.github.io/demo/api/actors/")
       .then((resp) => {
         setAttori(resp.data)
+      })
+  }
+  function fetchAttrici() {
+    axios.get("https://lanciweb.github.io/demo/api/actresses/")
+      .then((resp) => {
+        setAttrici(resp.data)
       })
   }
 
@@ -27,6 +35,9 @@ function App() {
         <div className="card-list">
           {attori.map((attore) => (
             <Card attore={attore} key={attore.id} />
+          ))}
+          {attrici.map((attrice) => (
+            <Card attore={attrice} key={attrice.id} />
           ))}
         </div>
       </div>

@@ -6,10 +6,10 @@ export default function Card({ attore }) {
     return (
         <div className="card">
             <div className="row g-0">
-                <div className="col-md-4">
+                <div className="col-4">
                     <img src={image} className="img-fluid rounded-start" alt={name} />
                 </div>
-                <div className="col-md-8">
+                <div className="col-8">
                     <div className={`card-body${death_year != null && death_year !== "" ? " bg-secondary" : ""}`}>
                         <h2 className="card-title">{name}</h2>
                         <h5>Anno di nascita:{birth_year}</h5>
