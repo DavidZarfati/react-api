@@ -1,0 +1,31 @@
+﻿
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : [
+                    	{
+                    		"id": 1,
+                    		"name": "Marlon Brando",
+                    		"birth_year": 1924,
+                    		"death_year": 2004,
+                    		"nationality": "American",
+                    		"known_for": ["The Godfather", "A Streetcar Named Desire", "On the Waterfront"],
+                    	...
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Access-Control-Allow-Origin: *
+                    x-proxy-cache: MISS
+                    X-GitHub-Request-Id: E35E:2C59D3:E41B3D:E7231D:69303AF3
+                    Age: 5
+                    X-Served-By: cache-fco2270029-FCO
+                    X-Cach...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Access-Control-Allow-Origin, *], [x-proxy-cache, MISS], [X-GitHub-Request-Id, E35E:2C59D3:E41B3D:E7231D:69303AF3]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 19811
+
+
+
